@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxury Watch Website Design System
+All colors, gradients, fonts, and animations defined here.
+All colors MUST be HSL for consistency.
+*/
+
+@layer base {
+  :root {
+    /* Base System Colors */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 215 28% 17%; /* Deep blue */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 215 28% 17%;
+
+    --radius: 0.75rem;
+
+    /* Luxury Color Palette */
+    --luxury-gold: 215 28% 17%;
+    --luxury-gold-light: 215 24% 27%;
+    --luxury-gold-dark: 215 32% 12%;
+    
+    --luxury-silver: 0 0% 85%;
+    --luxury-silver-light: 0 0% 92%;
+    --luxury-silver-dark: 0 0% 75%;
+    
+    --luxury-black: 0 0% 8%;
+    --luxury-black-light: 0 0% 15%;
+    --luxury-white: 0 0% 98%;
+
+    /* Luxury Gradients */
+    --luxury-gradient: linear-gradient(135deg, hsl(45 90% 65%), hsl(45 85% 55%));
+    --luxury-gradient-subtle: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 96%));
+    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+
+    /* Luxury Shadows */
+    --luxury-shadow: 0 25px 50px -12px hsla(0, 0%, 0%, 0.15), 0 0 30px hsla(45, 90%, 65%, 0.1);
+    --luxury-glow: 0 0 40px hsla(45, 90%, 65%, 0.3);
+    --glass-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.1);
+
+    /* Animation Variables */
+    --animation-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-luxury: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 45 90% 65%;
+  }
+
+  .dark {
+    /* Dark theme for luxury watch site */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 215 28% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 45 90% 65%;
+
+    /* Dark luxury colors */
+    --luxury-gold: 215 28% 17%;
+    --luxury-gold-light: 215 24% 27%;
+    --luxury-gold-dark: 215 32% 12%;
+    
+    --luxury-silver: 0 0% 70%;
+    --luxury-silver-light: 0 0% 80%;
+    --luxury-silver-dark: 0 0% 60%;
+    
+    --luxury-black: 0 0% 5%;
+    --luxury-black-light: 0 0% 12%;
+    --luxury-white: 0 0% 95%;
+
+    /* Dark mode gradients */
+    --luxury-gradient: linear-gradient(135deg, hsl(45 90% 65%), hsl(45 85% 55%));
+    --luxury-gradient-subtle: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 5%));
+    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+
+    /* Dark shadows */
+    --luxury-shadow: 0 25px 50px -12px hsla(0, 0%, 0%, 0.5), 0 0 30px hsla(45, 90%, 65%, 0.2);
+    --luxury-glow: 0 0 40px hsla(45, 90%, 65%, 0.4);
+    --glass-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.3);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 90% 65%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 45 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Glassmorphism utilities */
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--luxury-gold));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--luxury-gold-dark));
+  }
+
+  /* Luxury hover effects */
+  .luxury-hover {
+    transition: all 0.3s var(--animation-smooth);
+  }
+
+  .luxury-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--luxury-shadow);
+  }
+}
